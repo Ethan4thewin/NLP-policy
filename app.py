@@ -20,7 +20,7 @@ nltk.download('punkt')
 nltk.download('wordnet')
 nltk.download('stopwords')
 nltk.download('omw-1.4')
-
+embedding_model = KeyedVectors.load_word2vec_format('GoogleNews-vectors-negative300.bin', binary=True)
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -67,7 +67,7 @@ def preprocessing_policy(policy):
 #Feature Extraction - Google News Word2Vec Model
 def feature_extraction(df):
     #Load Google News Word2Vec Model
-    embedding_model = KeyedVectors.load_word2vec_format('GoogleNews-vectors-negative300.bin', binary=True)
+    
     w2v_data = get_word2vec_embeddings(embedding_model, df)
     return w2v_data
 
