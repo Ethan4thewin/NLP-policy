@@ -128,10 +128,10 @@ The model used in this instance is SVM, with tested result up to 93% accuracy.
 
 <!-- USAGE EXAMPLES -->
 ## Usage
+The project's primary usage is for text classification and summarization. It can be applied to automatically categorize and generate concise summaries of text data, making it useful for tasks such as content moderation, information retrieval, and document summarization. The web application (if deployed) provides a user-friendly interface for accessing these functionalities.
 ### Example
 ![Product Name Screen Shot1][product-screenshot1]
 ![Product Name Screen Shot2][product-screenshot2]
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
