@@ -39,8 +39,6 @@
   <p align="center">
     NLP system with web application
     <br />
-    <a href="https://github.com/Ethan4thewin/NLP-policy"><strong>Explore the docs »</strong></a>
-    <br />
     <br />
     <a href="https://github.com/Ethan4thewin/NLP-policy">View Demo</a>
     ·
@@ -79,6 +77,13 @@
 </div>
 
 A versatile web application that leverages natural language processing (NLP) and machine learning techniques to assist users in evaluating policy documents for its acceptability and identifying potential issues. The tool provides users with an efficient and effective means of ensuring that their policies adhere to predefined standards, all while highlighting and summarising the problematic parts of the policies.
+The current workflow is:
+* Data Preparation: Text data was preprocessed to normalize case, remove stopwords, tokenize, and lemmatize it.
+* Data Extraction: Word2Vec, trained on Google News data, transformed text into numerical vectors, capturing semantic word relationships.
+* Machine Learning Models: Various models, including Decision Tree, Random Forest, Support Vector Machine (SVM), Logistic Regression, and Convolutional Neural Network (CNN), were used for text classification. Hyperparameter tuning enhanced model performance.
+* Problematic Phrases: Highlighted problematic phrases in text using HTML <span> with red background.
+* Summarization: Automated text summarization with the BART model from HuggingFace to generate concise summaries.
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -102,7 +107,7 @@ A versatile web application that leverages natural language processing (NLP) and
 ## Setup
 
 ### Fast deployment
-The model used in this instance is SVM, with tested result up to 93% accuracy. For further configurations, please refer to the [Documentation](https://example.com).
+The model used in this instance is SVM, with tested result up to 95% accuracy.
 1. Clone or [download](https://github.com/Ethan4thewin/NLP-policy/archive/refs/heads/patch-1.zip) the repo.
 2. [Download](https://drive.google.com/file/d/1M4A7LNoHbNQ_glJ3Jz4fUNwAatRGfDbo/view?usp=sharing) the pre-trained word embeddings from Google News Word2Vec, unzip and put the .bin file in the main folder.
 3. Install required packages
@@ -125,6 +130,9 @@ The model used in this instance is SVM, with tested result up to 93% accuracy. F
 3. Run app.py. It will start a web server that listens on a specified port (usually port 5000 by default).
 4. Connect to localhost:*insert specified port* (by default, it will be localhost:5000)
 
+### Configurations
+The app.py classification model is currently SVM model in the .pkl file from the current five models pool: Decision Tree, Random Forest, SVM, Logistic Regression, and CNN. The classification model can be changed by running the [Jupyter Notebook](final_code_copy.ipynb) and change the function _classify_policy(policy_text)_ by uncomment the desired model. Then, you can rerun the notebook and the app.py to reflect the changes.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -140,8 +148,6 @@ The project's primary usage is for text classification and summarization. It can
 <div align="center">
   <img src="images/result.png" alt="Product Name Screen Shot2" width="750" />
 </div>
-
-_For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
