@@ -74,7 +74,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![Product Name Screen Shot White][product-screenshot-white]
+<div align="center">
+  <img src="images/index_white.png" alt="Product Name Screen Shot White" width="750" />
+</div>
 
 A versatile web application that leverages natural language processing (NLP) and machine learning techniques to assist users in evaluating policy documents for its acceptability and identifying potential issues. The tool provides users with an efficient and effective means of ensuring that their policies adhere to predefined standards, all while highlighting and summarising the problematic parts of the policies.
 
@@ -100,9 +102,10 @@ A versatile web application that leverages natural language processing (NLP) and
 ## Setup
 
 ### Fast deployment
-The model used in this instance is SVM, with tested result up to 93% accuracy.
-1. Clone or download the repo
-2. Install required packages
+The model used in this instance is SVM, with tested result up to 93% accuracy. For further configurations, please refer to the [Documentation](https://example.com).
+1. Clone or [download](https://github.com/Ethan4thewin/NLP-policy/archive/refs/heads/patch-1.zip) the repo.
+2. [Download](https://drive.google.com/file/d/1M4A7LNoHbNQ_glJ3Jz4fUNwAatRGfDbo/view?usp=sharing) the pre-trained word embeddings from Google News Word2Vec, unzip and put the .bin file in the main folder.
+3. Install required packages
    All packages use:
     1. **pandas**: For data manipulation and analysis.
     2. **numpy**: For numerical operations and arrays.
@@ -130,8 +133,13 @@ The model used in this instance is SVM, with tested result up to 93% accuracy.
 ## Usage
 The project's primary usage is for text classification and summarization. It can be applied to automatically categorize and generate concise summaries of text data, making it useful for tasks such as content moderation, information retrieval, and document summarization. The web application (if deployed) provides a user-friendly interface for accessing these functionalities.
 ### Example
-![Product Name Screen Shot1][product-screenshot1]
-![Product Name Screen Shot2][product-screenshot2]
+<div align="center">
+  <img src="images/index.png" alt="Product Name Screen Shot1" width="750" />
+</div>
+
+<div align="center">
+  <img src="images/result.png" alt="Product Name Screen Shot2" width="750" />
+</div>
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
@@ -167,7 +175,7 @@ Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
 <!-- CONTACT -->
 ## Contact
 
-Ethan - phatnguyenground@gmail.com - [My LinkedIn](https://www.linkedin.com/in/ethan-by-day/) - [My Website](https://ethanbyday.notion.site/)
+Ethan - phatnguyenground@gmail.com - [My LinkedIn][linkedin-url] - [My Website](https://ethanbyday.notion.site/)
 
 Project Link: [https://github.com/Ethan4thewin/NLP-policy](https://github.com/Ethan4thewin/NLP-policy)
 
@@ -198,6 +206,3 @@ I would like to express my gratitude to [Dr. Humphrey O. Obie](https://scholar.g
 [license-url]: https://github.com/Ethan4thewin/NLP-policy/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/ethan-by-day/
-[product-screenshot1]: images/index.png
-[product-screenshot2]: images/result.png
-[product-screenshot-white]: images/index_white.png
