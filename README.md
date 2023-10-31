@@ -131,7 +131,7 @@ The model used in this instance is SVM, with tested result up to 95% accuracy.
 4. Connect to localhost:*insert specified port* (by default, it will be localhost:5000)
 
 ### Configurations
-The app.py classification model is currently SVM model in the .pkl file from the current five models pool: Decision Tree, Random Forest, SVM, Logistic Regression, and CNN. The classification model can be changed by running the [Jupyter Notebook](final_code_copy.ipynb) and change the function _classify_policy(policy_text)_ by uncomment the desired model. Then, you can rerun the notebook and the app.py to reflect the changes.
+The app.py classification model is currently SVM model in the .pkl file from the current five models pool: Decision Tree, Random Forest, SVM, Logistic Regression, and CNN. The classification model can be changed by running the [Jupyter Notebook](final_code.ipynb) and change the function _classify_policy(policy_text)_ by uncomment the desired model. Then, you can rerun the notebook and the app.py to reflect the changes.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
