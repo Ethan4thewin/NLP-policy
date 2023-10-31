@@ -62,13 +62,7 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
+    <li><a href="#setup">Setup</a></li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -107,34 +101,30 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 
 <!-- GETTING STARTED -->
-## Getting Started
+## Setup
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
+### Fast deployment
+The model used in this instance is SVM, with tested result up to 93% accuracy.
+1. Clone or download the repo
+2. Install required packages
+   All packages use:
+    1. **pandas**: For data manipulation and analysis.
+    2. **numpy**: For numerical operations and arrays.
+    3. **gensim**: For Word2Vec model usage.
+    4. **scikit-learn**: For machine learning tasks, including classifiers, evaluation metrics, and preprocessing tools.
+    5. **nltk**: For natural language processing tasks, such as text tokenization and stopword removal.
+    6. **string**: Python standard library for string operations.
+    7. **keras**: For deep learning models, including the Convolutional Neural Network (CNN) in your code.
+    8. **matplotlib**: For data visualization (if needed).
+    9. **flask**: For developing web applications (if used).
+    10. **transformers**: For working with pre-trained models from HuggingFace (used for summarization).
+    11. **tensorflow**: Required for Keras and deep learning models.
   ```sh
-  npm install npm@latest -g
+  pip install pandas numpy gensim scikit-learn nltk string keras matplotlib flask transformers tensorflow
   ```
 
-### Installation
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/github_username/repo_name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+3. Run app.py. It will start a web server that listens on a specified port (usually port 5000 by default).
+4. Connect to localhost:*insert specified port* (by default, it will be localhost:5000)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
