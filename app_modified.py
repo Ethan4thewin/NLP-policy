@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import gensim
 from gensim.models import KeyedVectors
 import re
 import string
