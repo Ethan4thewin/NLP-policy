@@ -1,5 +1,3 @@
 gensim
-re
-string
 nltk
 joblib
