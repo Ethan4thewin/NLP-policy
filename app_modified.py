@@ -1,5 +1,4 @@
 import streamlit as st
-from flask import Flask, request, render_template #For API Implementation
 import pandas as pd
 import numpy as np
 from gensim.models import KeyedVectors
@@ -9,42 +8,18 @@ import nltk
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
-
 import joblib
 
 
-app = Flask(__name__)
+# Load SVM model and Word2Vec model
 model = joblib.load('svm_model.pkl')
+embedding_model = KeyedVectors.load_word2vec_format('GoogleNews-vectors-negative300.bin', binary=True)
+
 # Download necessary NLTK datasets
 nltk.download('punkt')
 nltk.download('wordnet')
 nltk.download('stopwords')
 nltk.download('omw-1.4')
-embedding_model = KeyedVectors.load_word2vec_format('GoogleNews-vectors-negative300.bin', binary=True)
-@app.route('/')
-def index():
-    return render_template('index.html')
-
-@app.route('/validate', methods=['POST'])
-def validate():
-    text = request.form['text']
-    
-    
-    # Policies input classification
-    problem_list = []
-    paragraphs = split_into_paragraphs(text)
-
-    for paragraph in paragraphs:
-        prediction = classify_policy(paragraph)
-        if prediction == 0:
-            problem_list.append(paragraph)
-
-    #Highlight
-    if len(problem_list) >= 1:
-        text = highlight_problems(text, problem_list)
-   
-    # Render the result.html template with the validation results
-    return render_template('result.html', text=text, problem_list=problem_list)
 
 
 #Data Processing
@@ -140,5 +115,30 @@ def highlight_problems(text, problem_list):
         text = re.sub(pattern, highlighted, text)
     return text.replace('\n', '<br>')
 
+
+def main():
+    st.title('Privacy Policy Validator')
+
+    # Create a text area widget for user input
+    text = st.text_area('Enter Text', '')
+
+    # Create a button to trigger validation
+    if st.button('Validate'):
+        # Validation logic
+        problem_list = []
+        paragraphs = split_into_paragraphs(text)
+
+        for paragraph in paragraphs:
+            prediction = classify_policy(paragraph)
+            if prediction == 0:
+                problem_list.append(paragraph)
+
+        if len(problem_list) >= 1:
+            text = highlight_problems(text, problem_list)
+
+        # Display results
+        st.write("Here is the problematic part:")
+        st.write(problem_list)
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    main()
