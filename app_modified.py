@@ -1,3 +1,4 @@
+import streamlit as st
 from flask import Flask, request, render_template #For API Implementation
 import pandas as pd
 import numpy as np
