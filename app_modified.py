@@ -10,6 +10,20 @@ from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
 import joblib
+import requests
+
+# URL of the large binary file hosted on an external service
+file_url = 'https://huggingface.co/NathaNn1111/word2vec-google-news-negative-300-bin/resolve/main/GoogleNews-vectors-negative300.bin'
+
+# Destination path where the file will be saved locally
+local_path = 'GoogleNews-vectors-negative300.bin'
+
+# Download the file
+response = requests.get(file_url)
+with open(local_path, 'wb') as file:
+    file.write(response.content)
+
+print('File downloaded successfully.')
 
 
 # Load SVM model and Word2Vec model
