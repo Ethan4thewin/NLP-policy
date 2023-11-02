@@ -91,13 +91,13 @@ The current workflow is:
 
 ### Built With
 
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
-![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
-![Keras](https://img.shields.io/badge/Keras-%23D00000.svg?style=for-the-badge&logo=Keras&logoColor=white)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black)
-![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)
+![Python Badge](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff&style=flat)
+![pandas Badge](https://img.shields.io/badge/pandas-150458?logo=pandas&logoColor=fff&style=flat)
+![NumPy Badge](https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=fff&style=flat)
+![Keras Badge](https://img.shields.io/badge/Keras-D00000?logo=keras&logoColor=fff&style=flat)
+![scikit-learn Badge](https://img.shields.io/badge/scikit--learn-F7931E?logo=scikitlearn&logoColor=fff&style=flat)
+![Flask Badge](https://img.shields.io/badge/Flask-000?logo=flask&logoColor=fff&style=flat)
+![Streamlit Badge](https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit&logoColor=fff&style=flat)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -106,10 +106,12 @@ The current workflow is:
 <!-- GETTING STARTED -->
 ## Setup
 
-### Fast deployment
 The model used in this instance is SVM, with tested result up to 95% accuracy.
 1. Clone or [download](https://github.com/Ethan4thewin/NLP-policy/archive/refs/heads/patch-1.zip) the repo.
-2. [Download](https://drive.google.com/file/d/1M4A7LNoHbNQ_glJ3Jz4fUNwAatRGfDbo/view?usp=sharing) the pre-trained word embeddings from Google News Word2Vec, unzip and put the .bin file in the main folder.
+2. Download the pre-trained word embeddings from Google News Word2Vec, unzip and put the .bin file in the main folder.
+  * HuggingFace: https://huggingface.co/NathaNn1111/word2vec-google-news-negative-300-bin
+  * Google Drive (zip): https://drive.google.com/file/d/1M4A7LNoHbNQ_glJ3Jz4fUNwAatRGfDbo/view?usp=sharing
+  * Alternative Google Drive link: https://drive.google.com/file/d/1QsLGJwOWkNoekIASH0cCar07vaoYZN33/view?usp=sharing
 3. Install required packages
    All packages use:
     1. **pandas**: For data manipulation and analysis.
@@ -119,19 +121,22 @@ The model used in this instance is SVM, with tested result up to 95% accuracy.
     5. **nltk**: For natural language processing tasks, such as text tokenization and stopword removal.
     6. **string**: Python standard library for string operations.
     7. **keras**: For deep learning models, including the Convolutional Neural Network (CNN) in your code.
-    8. **matplotlib**: For data visualization (if needed).
-    9. **flask**: For developing web applications (if used).
-    10. **transformers**: For working with pre-trained models from HuggingFace (used for summarization).
-    11. **tensorflow**: Required for Keras and deep learning models.
+    8. **flask**: For developing web applications (if used).
+    9. **transformers**: For working with pre-trained models from HuggingFace (used for summarization).
+    10. **tensorflow**: Required for Keras and deep learning models.
   ```sh
-  pip install pandas numpy gensim scikit-learn nltk string keras matplotlib flask transformers tensorflow
+  pip install pandas numpy gensim scikit-learn nltk string keras flask transformers tensorflow
   ```
 
-3. Run app.py. It will start a web server that listens on a specified port (usually port 5000 by default).
-4. Connect to localhost:*insert specified port* (by default, it will be localhost:5000)
+### Flask deployment
+1. Run app.py. It will start a web server on Flask that listens on a specified port (usually port 5000 by default).
+2. Connect to localhost:*insert specified port* (by default, it will be localhost:5000)
+
+### Streamlit deployment
+Coming Soon
 
 ### Configurations
-The app.py classification model is currently SVM model in the .pkl file from the current five models pool: Decision Tree, Random Forest, SVM, Logistic Regression, and CNN. The classification model can be changed by running the [Jupyter Notebook](final_code.ipynb) and change the function `classify_policy(policy_text)` by uncomment the desired model. Then, you can rerun the notebook and the app.py to reflect the changes.
+The classification model is currently SVM model in the .pkl file from the current five models pool: Decision Tree, Random Forest, SVM, Logistic Regression, and CNN. The classification model can be changed by running the [Notebook](final_code.ipynb) or the [Notebook without Summarisation model](final_code.ipynb) and change the function `classify_policy(policy_text)` by uncomment the desired model. Then, you can rerun the notebook and the app.py to reflect the changes.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
