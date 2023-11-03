@@ -40,7 +40,7 @@
     NLP system with web application
     <br />
     <br />
-    <a href="https://github.com/Ethan4thewin/NLP-policy">View Demo</a>
+    <a href="https://colab.research.google.com/drive/1jM-pC5TXI-oo_Ybl5AGeevZP61ugHcKW?usp=sharing">View Demo on Google Colaboratory</a>
     ·
     <a href="https://github.com/Ethan4thewin/NLP-policy/issues">Report Bug or Request Feature</a>
   </p>
@@ -106,7 +106,6 @@ The current workflow is:
 <!-- GETTING STARTED -->
 ## Setup
 
-The model used in this instance is SVM, with tested result up to 95% accuracy.
 1. Clone or [download](https://github.com/Ethan4thewin/NLP-policy/archive/refs/heads/patch-1.zip) the repo.
 2. Download the pre-trained word embeddings from Google News Word2Vec, unzip and put the .bin file in the main folder.
   * HuggingFace: https://huggingface.co/NathaNn1111/word2vec-google-news-negative-300-bin
@@ -121,19 +120,22 @@ The model used in this instance is SVM, with tested result up to 95% accuracy.
     5. **nltk**: For natural language processing tasks, such as text tokenization and stopword removal.
     6. **string**: Python standard library for string operations.
     7. **keras**: For deep learning models, including the Convolutional Neural Network (CNN) in your code.
-    8. **flask**: For developing web applications (if used).
-    9. **transformers**: For working with pre-trained models from HuggingFace (used for summarization).
-    10. **tensorflow**: Required for Keras and deep learning models.
+    8. **transformers**: For working with pre-trained models from HuggingFace (used for summarization).
+    9. **tensorflow**: Required for Keras and deep learning models.
+    10. **flask** or **streamlit**: For developing web applications (if used).
   ```sh
-  pip install pandas numpy gensim scikit-learn nltk string keras flask transformers tensorflow
+  pip install pandas numpy gensim scikit-learn nltk string keras transformers tensorflow flask streamlit
   ```
 
-### Flask deployment
-1. Run app.py. It will start a web server on Flask that listens on a specified port (usually port 5000 by default).
-2. Connect to localhost:*insert specified port* (by default, it will be localhost:5000)
+### Flask deployment (assuming Flask is installed)
+> The model used in this instance is SVM, with tested result up to 95% accuracy.
+1. Run app_flask.py. It will start a web server on Flask that listens on a specified port (usually port 5000 by default).
+2. Connect to localhost:*insert specified port* (by default, it will be localhost:5000) on a web browser. The web app should be displayed.
 
-### Streamlit deployment
-Coming Soon
+### Streamlit deployment (assuming Streamlit is installed)
+> The model used in this instance is SVM, with tested result up to 95% accuracy.
+1. Run app_streamlit.py. It will start a web server on Streamlit that listens on a specified port (usually port 8501 by default).
+2. Connect to localhost:*insert specified port* (by default, it will be localhost:8501) on a web browser. The web app should be displayed.
 
 ### Configurations
 The classification model is currently SVM model in the .pkl file from the current five models pool: Decision Tree, Random Forest, SVM, Logistic Regression, and CNN. The classification model can be changed by running the [Notebook](final_code.ipynb) or the [Notebook without Summarisation model](final_code.ipynb) and change the function `classify_policy(policy_text)` by uncomment the desired model. Then, you can rerun the notebook and the app.py to reflect the changes.
@@ -152,6 +154,10 @@ The project's primary usage is for text classification and summarization. It can
 
 <div align="center">
   <img src="images/result.png" alt="Product Name Screen Shot2" width="750" />
+</div>
+
+<div align="center">
+  <img src="images/streamlit.jpeg" alt="Product Name Screen Shot Streamlit" width="750" />
 </div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
