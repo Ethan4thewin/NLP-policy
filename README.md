@@ -138,7 +138,7 @@ The current workflow is:
 2. Connect to localhost:*insert specified port* (by default, it will be localhost:8501) on a web browser. The web app should be displayed.
 
 ### Configurations
-The classification model is currently SVM model in the .pkl file from the current five models pool: Decision Tree, Random Forest, SVM, Logistic Regression, and CNN. The classification model can be changed by running the [Notebook](final_code.ipynb) or the [Notebook without Summarisation model](final_code.ipynb) and change the function `classify_policy(policy_text)` by uncomment the desired model. Then, you can rerun the notebook and the app.py to reflect the changes.
+The classification model is currently SVM model in the .pkl file from the current five models pool: Decision Tree, Random Forest, SVM, Logistic Regression, and CNN. The classification model can be changed by running the [Notebook](final_code.ipynb) and change the function `classify_policy(policy_text)` by uncomment the desired model. Then, you can rerun the notebook and the app.py to reflect the changes.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
