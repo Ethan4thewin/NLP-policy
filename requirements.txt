@@ -1,4 +1,0 @@
-gensim
-nltk
-joblib
-scikit-learn
